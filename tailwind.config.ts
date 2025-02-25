@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        dark: "var(--dark)",
+        onDark: "var(--on-dark)",
+        primary: "var(--primary)",
+        onPrimary: "var(--on-primary)",
       },
     },
   },
