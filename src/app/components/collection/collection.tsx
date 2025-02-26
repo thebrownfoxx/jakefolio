@@ -1,7 +1,7 @@
 import React from "react";
 import CollectionInfo from "@/app/components/collection/collection-info";
 import classNames from "classnames";
-import CollectionImage from "../../../../public/collection-image";
+import CollectionImage from "./collection-image";
 
 export interface CollectionProps {
   imageSrc: string;
