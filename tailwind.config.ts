@@ -15,6 +15,7 @@ export default {
         onDark: "var(--on-dark)",
         primary: "var(--primary)",
         onPrimary: "var(--on-primary)",
+        accent: "var(--accent)",
       },
     },
   },

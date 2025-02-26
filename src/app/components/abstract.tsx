@@ -4,7 +4,7 @@ import { fahkwang, oswald } from "@/app/fonts";
 
 export default function Abstract() {
   return (
-    <div className="flex flex-col items-center bg-dark text-onDark">
+    <div className="flex flex-col items-center text-onDark">
       <div className="flex flex-col items-center max-w-3xl py-16">
         <PortfolioTitle top />
         <Image

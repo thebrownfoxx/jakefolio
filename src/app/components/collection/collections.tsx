@@ -81,9 +81,14 @@ export default function Collections({
   return (
     <div className="flex flex-col items-center bg-dark text-primary">
       <div className="flex flex-col items-center py-24 gap-24 max-w-5xl">
-        <h2 className={classNames(oswald.className, "text-7xl font-semibold")}>
-          Collections
-        </h2>
+        <div className="flex flex-col items-center gap-8">
+          <h2
+            className={classNames(oswald.className, "text-7xl font-semibold")}
+          >
+            Collections
+          </h2>
+          <p className="text-3xl text-accent">• • •</p>
+        </div>
         {collections.map((collection) => (
           <Collection key={collection.title} {...collection} />
         ))}
