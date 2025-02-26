@@ -10,7 +10,7 @@ interface HeaderItemProps {
 export default function HeaderItem({ text, path }: HeaderItemProps) {
   const router = useRouter();
   const pathName = usePathname();
-  const selected = pathName == path;
+  const selected = pathName === path;
 
   return (
     <button
