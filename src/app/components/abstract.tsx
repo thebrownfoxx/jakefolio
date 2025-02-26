@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { fahkwang, oswald } from "@/app/fonts";
+import { VscChevronDown } from "react-icons/vsc";
 
 export default function Abstract() {
   return (
@@ -32,6 +33,9 @@ export default function Abstract() {
           I do various design conceptualization from online graphics, book
           illustrations to animation and video editing.
         </p>
+        <a href="#collections">
+          <VscChevronDown className="mt-32 size-12" />
+        </a>
       </div>
     </div>
   );

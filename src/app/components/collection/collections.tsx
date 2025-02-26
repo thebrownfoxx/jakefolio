@@ -79,7 +79,10 @@ export default function Collections({
   collections = defaultCollections,
 }: CollectionsProps) {
   return (
-    <div className="flex flex-col items-center bg-dark text-primary">
+    <div
+      id="collections"
+      className="flex flex-col items-center bg-dark text-primary"
+    >
       <div className="flex flex-col items-center py-24 gap-24 max-w-5xl">
         <div className="flex flex-col items-center gap-8">
           <h2
@@ -90,7 +93,11 @@ export default function Collections({
           <p className="text-3xl text-accent">• • •</p>
         </div>
         {collections.map((collection) => (
-          <Collection key={collection.title} {...collection} />
+          <Collection
+            className="animate-in slide-in-from-bottom"
+            key={collection.title}
+            {...collection}
+          />
         ))}
       </div>
     </div>
