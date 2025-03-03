@@ -5,7 +5,7 @@ import BackgroundVideo from "@/app/components/background-video";
 export default function Home() {
   return (
     <div className="static">
-      <BackgroundVideo className="-z-10 fixed top-0" />
+      <BackgroundVideo className="-z-10 fixed top-0 h-screen w-screen object-fill" />
       <div className="flex flex-col">
         <Abstract />
         <Collections />

@@ -1,36 +1,42 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import HeaderContainer from "@/components/header/header-container";
-import HeaderItem from "@/components/header/header-item";
+import { HeaderItemProps } from "@/components/header/header-item";
+import Header from "@/components/header/header";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Portfolio | Jovic Cudia",
 };
 
+const headerItems: HeaderItemProps[] = [
+  {
+    text: "Home",
+    path: "/",
+  },
+  {
+    text: "Real Estate Projects",
+    path: "/projects/real-estate",
+  },
+  {
+    text: "Finance and E-Learning Projects",
+    path: "/projects/finance-and-e-learning",
+  },
+  {
+    text: "E-Commerce and Events",
+    path: "/projects/e-commerce-and-events",
+  },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`antialiased`}>
         <nav>
-          <HeaderContainer>
-            <HeaderItem text="Home" path="/" />
-            <HeaderItem
-              text="Real Estate Projects"
-              path="/projects/real-estate"
-            />
-            <HeaderItem
-              text="Finance and E-Learning Projects"
-              path="/projects/finance-and-e-learning"
-            />
-            <HeaderItem
-              text="E-Commerce and Events"
-              path="/projects/e-commerce-and-events"
-            />
-          </HeaderContainer>
+          <Header items={headerItems} />
         </nav>
         {children}
       </body>

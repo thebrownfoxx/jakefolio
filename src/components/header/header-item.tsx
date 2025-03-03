@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import classNames from "classnames";
 
-interface HeaderItemProps {
+export interface HeaderItemProps {
   text: string;
   path: string;
 }
@@ -14,7 +15,10 @@ export default function HeaderItem({ text, path }: HeaderItemProps) {
 
   return (
     <button
-      className={`px-6 py-4 text-sm font-semibold ${selected ? "opacity-100" : "opacity-60"}`}
+      className={classNames(
+        "px-6 py-4 text-sm font-semibold text-nowrap",
+        selected ? "opacity-100" : "opacity-60",
+      )}
       onClick={() => router.push(path)}
     >
       {text}
